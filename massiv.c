@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(){
-    int array1[5] = {5, 34, 12, 4, 567};
+    int array1[6] = {5, 34, 12, 4, 567};
     int array2[] = {5, 34, 12, 4, 567};
     int array3[40] = {0};
     int array5[] = {1, [2] = 6, 3, 4, 8};
@@ -35,6 +35,22 @@ int main(){
 
     for(int i = 0; i < size; i++){
         printf("%d ",array3[i]);
+    }
+
+    printf("\n\n");
+
+    // ВСТАВКА В МАССИВ
+
+    for(int i = size - 1; i >= 0; i--){
+        array1[i] = array1[i - 1];
+        if(i == 2){
+            array1[i] = 6767;
+            break;
+        }
+    }
+
+    for(int i = 0; i < size; i++){
+        printf("%d ",array1[i]);
     }
 
 }
