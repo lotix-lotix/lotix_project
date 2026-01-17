@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "func.h"
 
 int main(){
     int arg = 4;
@@ -12,9 +13,9 @@ int main(){
     ptr_arg_bit += 2;
     *ptr_arg_bit = 3;
 
-    printf("*ptr = %d, *ptr_arg_bit = %c, arg = %d", *ptr_arg, *ptr_arg_bit, arg);
+    printf("*ptr = %d, *ptr_arg_bit = %c, arg = %d\n\n", *ptr_arg, *ptr_arg_bit, arg);
 
-    
+    printf("per_sq = %.2f", per_sq(2.2, 4.0));
     
     
     return 0;
