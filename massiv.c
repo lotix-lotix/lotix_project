@@ -41,7 +41,7 @@ int main(){
 
     // ВСТАВКА В МАССИВ
 
-    for(int i = size - 1; i >= 0; i--){
+    for(int i = size1 - 1; i >= 0; i--){
         array1[i] = array1[i - 1];
         if(i == 2){
             array1[i] = 6767;
@@ -49,8 +49,23 @@ int main(){
         }
     }
 
-    for(int i = 0; i < size; i++){
+    for(int i = 0; i < size1; i++){
         printf("%d ",array1[i]);
     }
 
+    printf("\n\n");
+
+    // УДАЛЕНИЕ ЭЛЕМЕНТА ИЗ МАССИВА
+    int del_elm = 3;
+    for(int i = del_elm; i < size1; i++){
+        array1[i] = array1[i + 1];
+    }
+
+    for(int i = 0; i < size1; i++){
+        printf("%d ",array1[i]);
+    }
+
+    printf("\n\n");
+
+    return 0;
 }
