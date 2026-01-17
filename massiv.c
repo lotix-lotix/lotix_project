@@ -18,5 +18,10 @@ int main(){
     for(int i = 0; i < sizeof(array1) / sizeof(*array1); i++)
         printf("%d\t", *(array1+i));
 
+    int x = *ptr_ar;
+    printf("\nx = %d", x);
+    x = *(ptr_ar+1);
+    printf("\nx = %d", x);
+
 
 }
