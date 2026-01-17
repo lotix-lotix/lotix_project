@@ -3,7 +3,7 @@
 int main(){
     int array1[5] = {5, 34, 12, 4, 567};
     int array2[] = {5, 34, 12, 4, 567};
-    int array3[10] = {0};
+    int array3[40] = {0};
     int array5[] = {1, [2] = 6, 3, 4, 8};
 
     int* ptr_ar = array1;
@@ -21,7 +21,20 @@ int main(){
     int x = *ptr_ar;
     printf("\nx = %d", x);
     x = *(ptr_ar+1);
-    printf("\nx = %d", x);
+    printf("\nx = %d\n", x);
 
+    int size1 = sizeof(array1) / sizeof(*array1);
+    int size3 = sizeof(array3) / sizeof(*array3);
+    int size = (size1 < size3) ? size1 : size3;
+
+    // КОПИРОВАНИЕ МАССИВА
+
+    for(int i = 0; i < size; i++){
+        array3[i] = array1[i];
+    }
+
+    for(int i = 0; i < size; i++){
+        printf("%d ",array3[i]);
+    }
 
 }
