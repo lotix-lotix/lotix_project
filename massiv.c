@@ -56,7 +56,7 @@ int main(){
     printf("\n\n");
 
     // УДАЛЕНИЕ ЭЛЕМЕНТА ИЗ МАССИВА
-    int del_elm = 3;
+    int del_elm = 3; // array[3] = 12;
     for(int i = del_elm; i < size1; i++){
         array1[i] = array1[i + 1];
     }
