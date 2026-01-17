@@ -13,6 +13,8 @@ int main(){
     *ptr_arg_bit = 3;
 
     printf("*ptr = %d, *ptr_arg_bit = %c, arg = %d", *ptr_arg, *ptr_arg_bit, arg);
+
+    
     
     
     return 0;
