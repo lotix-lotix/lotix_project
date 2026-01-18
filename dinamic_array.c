@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 
 void* fill_array(short* data, size_t* lenght, size_t* compateti, short value)
@@ -9,14 +10,11 @@ void* fill_array(short* data, size_t* lenght, size_t* compateti, short value)
 
     if(*lenght >= *compateti){
         *compateti *= 2;
-        short* ar = malloc(*compateti * sizeof(*ar));
+        //short* ar = malloc(*compateti * sizeof(*ar));
+        short* ar = realloc(data, *compateti * sizeof(*ar));
         if(ar == NULL)
             return data;
 
-        for(int i = 0; i < *lenght; i++)
-            ar[i] = data[i];
-
-        free(data);
         data = ar;
     }
 
