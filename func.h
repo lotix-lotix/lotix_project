@@ -1,6 +1,6 @@
-#ifndef __FUNC_H_
-#define __FUNC_H_
+#ifndef __FUNC_H__
+#define __FUNC_H__
 
-double per_sq(double, double);
+double per_sq(double w, double h);
 
 #endif

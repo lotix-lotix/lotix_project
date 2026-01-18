@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "func.h"
 
+
 int main(){
     int arg = 4;
     int* ptr_arg = &arg;
@@ -15,7 +16,9 @@ int main(){
 
     printf("*ptr = %d, *ptr_arg_bit = %c, arg = %d\n\n", *ptr_arg, *ptr_arg_bit, arg);
 
-    printf("per_sq = %.2f", per_sq(2.2, 4.0));
+    double per_per = per_sq(2.0, 4.0);
+
+    printf("per_per = %.2f", per_per);
     
     
     return 0;
